@@ -34,7 +34,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 #新增404必须把debug改成false
-DEBUG = True
+DEBUG = False
 #这里也要改，把空改了
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
