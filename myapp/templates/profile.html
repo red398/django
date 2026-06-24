@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {{ user_form.as_p }}
+    {{ profile_form.as_p }}
+    <button type="submit">保存修改</button>
+</form>
+</body>
+</html>

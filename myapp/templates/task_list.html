@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task</title>
+</head>
+<body>
+<h3>任务列表(需要view_task权限)</h3>
+{% for item in tasks %}
+<p>{{item.title}}---{{item.status}}</p>
+{% endfor %}
+<p><a href="{% url 'task_close' %}">关闭任务(需要close_task权限)</a> </p>
+
+</body>
+</html>

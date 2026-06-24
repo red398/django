@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>订单ID</th>
+        <th>订单状态</th>
+        <th>创建时间</th>
+        <th>花费</th>
+    </tr>
+    {% for order in order_list %}
+    <tr>
+        <td>{{ order.id }}</td>
+        <td>{{ order.status }}</td>
+        <td>{{ order.created_date }}</td>
+        <td>{{ order.currency }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

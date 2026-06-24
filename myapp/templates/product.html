@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}商品展示{% endblock %}
+{% block content %}
+  {% include 'form.html' %}
+{% endblock %}
+{#  这是注释 #}
+{% block script %}
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+<script>
+$('.ajax-form').on('submit', function(e) {
+    // 阻止默认刷新提交
+    e.preventDefault();
+
+    // 改用 const
+    const $form = $(this);
+
+    $.ajax({
+        url: $form.attr('action'),
+        type: $form.attr('method'),
+        data: $form.serialize(),
+
+        success: function(res) {
+            // 替换表单
+            $form.replaceWith(res);
+        }
+    });
+});
+</script>
+{% endblock %}

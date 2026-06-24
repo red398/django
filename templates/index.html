@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎页</title>
+</head>
+<body>
+<h2>登录成功</h2>
+<P>用户名:{{user.username}}</P>
+<p>邮箱:{{user.email}}</p>
+<a href="{% url 'logout' %}">退出登录</a>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+</head>
+<body>
+
+<h2>当前昵称{{name}}</h2>
+<form method="post">
+  {% csrf_token %}
+  <input type="text" name="nickname" placeholder="请输入新昵称">
+  <button type="submit">提交修改</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>商品名</th>
+        <th>商品数量</th>
+        <th>商品单价</th>
+    </tr>
+    {% for line in order_line_list %}
+    <tr>
+        <td>{{ line.title }}</td>
+        <td>{{ line.quantity }}</td>
+        <td>{{ line.unit_price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}模版继承{% endblock %}
+{% block content %}
+<h3>文件上传示例</h3>
+    <!-- 文件上传表单固定格式 -->
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">提交上传</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product</title>
+</head>
+<body>
+<h1>这是product_list</h1>
+{% for item in products %}
+<p>商品名称:{{item.title}}</p>
+{% empty %}
+<p>暂无666</p>
+{% endfor %}
+{{user}}
+</body>
+</html>

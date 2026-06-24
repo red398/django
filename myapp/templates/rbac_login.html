@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rbac登录界面</title>
+</head>
+<body>
+<h1>这是rbac登录界面</h1>
+<p style="color:red">{{msg}}</p>
+<form method="post">
+  {% csrf_token %}
+  <p>用户名:<input name="username" required></p>
+  <p>密码:<input type="password" name="password" required></p>
+  <button type="submit">登录</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+# 虚拟环境
+.venv/
+
+# 代码缓存
+__pycache__/
+*.pyc
+
+# 环境配置（数据库账号密码在这里，必须屏蔽）
+.env
+
+# 运行时资源，不上传源码库
+media/
+static/
+logs/
+*.log
+
+# Celery临时文件
+*.bak
+*.dat
+*.dir
+
+# IDE配置
+.idea/
+.vscode/
+
+#本地数据库
+db.sqlite3

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>重置密码</title>
+</head>
+<body>
+    <h2>重置你的密码</h2>
+    <!-- action留空，提交到当前页面地址，自动带上路径里的token -->
+    <form action="" method="post">
+        {% csrf_token %}
+        <!-- 隐藏token，提交时传给后端 -->
+        <input type="hidden" name="token" value="{{ token }}">
+
+        <p>
+            新密码：<input type="password" name="new_pwd" required>
+        </p>
+        <p>
+            确认密码：<input type="password" name="re_pwd" required>
+        </p>
+        <p>
+            <button type="submit">提交重置</button>
+        </p>
+    </form>
+</body>
+</html>
